@@ -225,7 +225,7 @@ world-settings:
       player:
         spawn-invulnerable-ticks: 60
         invulnerable-while-accepting-resource-pack: false
-        teleport-if-outside-border: false
+        teleport-if-outside-border: true
         totem-of-undying-works-in-inventory: false
         fix-stuck-in-portal: false
         one-punch-in-creative: false
@@ -1304,3 +1304,47 @@ world-settings:
       use-night-vision: false
     hunger:
       starvation-damage: 1.0
+  world-earth:
+    mobs:
+      zombie:
+        aggressive-towards-villager-when-lagging: false
+  world-earth_nether:
+    mobs:
+      zombie:
+        aggressive-towards-villager-when-lagging: false
+  world-earth_the_end:
+    mobs:
+      zombie:
+        aggressive-towards-villager-when-lagging: false
+  world-alternated:
+    mobs:
+      zombie:
+        aggressive-towards-villager-when-lagging: false
+  world-alternated_nether:
+    mobs:
+      zombie:
+        aggressive-towards-villager-when-lagging: false
+  world-alternated_the_end:
+    mobs:
+      zombie:
+        aggressive-towards-villager-when-lagging: false
+  world-resource:
+    mobs:
+      dolphin:
+        disable-treasure-searching: true
+      villager:
+        brain-ticks: 2
+      zombie:
+        aggressive-towards-villager-when-lagging: false
+  world-resource_nether:
+    mobs:
+      villager:
+        brain-ticks: 2
+      zombie:
+        aggressive-towards-villager-when-lagging: false
+  world-resource_the_end:
+    mobs:
+      villager:
+        brain-ticks: 2
+      zombie:
+        aggressive-towards-villager-when-lagging: false

@@ -153,8 +153,8 @@ world-settings:
       sprint-multiplier: 0.1
       other-multiplier: 0.0
     max-tick-time:
-      tile: 50
-      entity: 50
+      tile: 1000
+      entity: 1000
     squid-spawn-range:
       min: 45.0
     entity-tracking-range:
@@ -163,3 +163,145 @@ world-settings:
       monsters: 48
       misc: 32
       other: 64
+  world-lobby:
+    item-despawn-rate: 4000
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+  world-earth:
+    seed-village: 4076135644
+    seed-desert: 6807756666
+    seed-ocean: 3470160570
+    seed-slime: 1953041210
+    seed-mansion: 2761998892
+    seed-portal: 4846493843
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
+  world-earth_nether:
+    seed-fortress: 5782577384
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
+  world-earth_the_end:
+    seed-endcity: 5454441112
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
+  world-alternated:
+    seed-village: 3948827095
+    seed-desert: 4671626037
+    seed-ocean: 3804964221
+    seed-slime: 2558058693
+    seed-mansion: 4259297374
+    seed-portal: 1967480196
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
+  world-alternated_nether:
+    seed-fortress: 1533710123
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
+  world-alternated_the_end:
+    seed-endcity: 3499109163
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
+  world-resource:
+    hopper-amount: 4
+    seed-village: 2987366183
+    seed-desert: 1729903341
+    seed-igloo: 3685843803
+    seed-jungle: 4404226240
+    seed-swamp: 5397100570
+    seed-monument: 1220436538
+    seed-shipwreck: 3782034306
+    seed-ocean: 5475614833
+    seed-outpost: 5531596096
+    seed-slime: 1389647016
+    seed-mansion: 5507250516
+    seed-portal: 4644925268
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
+    ticks-per:
+      hopper-transfer: 16
+      hopper-check: 2
+  world-resource_nether:
+    hopper-amount: 4
+    seed-bastion: 5370911591
+    seed-fortress: 1140685153
+    seed-fossil: 4794269984
+    seed-portal: 1177628571
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
+    ticks-per:
+      hopper-transfer: 16
+      hopper-check: 2
+  world-resource_the_end:
+    hopper-amount: 4
+    seed-endcity: 3969658088
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
+    ticks-per:
+      hopper-transfer: 16
+      hopper-check: 2
+  worldeditregentempworld:
+    verbose: false
