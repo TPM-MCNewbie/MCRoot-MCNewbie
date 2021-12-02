@@ -1,0 +1,84 @@
+name: File Transfer
+
+on:
+  schedule:
+    - cron: '0 17 * * *'
+  workflow_dispatch:
+
+jobs:
+  file_transfer:
+    name: File transfer
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@master
+
+      - name: Download Server JAR
+        run: |
+          mc_api1=$(curl "https://api.pl3x.net/v2/purpur/" -H "Accept: application/json" -H "Content-Type: application/json")
+          mc_project=$(jq -r '.project' <<< ${mc_api1})
+          echo "mc_project=$mc_project" >> $GITHUB_ENV
+          mc_version=$(jq -r '.versions[0]' <<< ${mc_api1})
+          
+          mc_api2=$(curl "https://api.pl3x.net/v2/purpur/${mc_version}/" -H "Accept: application/json" -H "Content-Type: application/json")
+          mc_build=$(jq -r '.builds.latest' <<< ${mc_api2})
+          
+          touch "${mc_project}-${mc_version}-${mc_build}"
+          curl "https://api.pl3x.net/v2/purpur/${mc_version}/${mc_build}/download" -o server.jar
+
+      - name: Checkout Repository - MC-DataPacks
+        uses: actions/checkout@master
+        with:
+          repository: TPM-MCNewbie/MC-DataPacks
+          token: ${{ secrets.GH_PAT }}
+          path: .github/temp/MC-DataPacks
+      - name: Copy Data Packs
+        run: |
+          mc_world=$(cat server.properties | grep "level-name" | cut -d '=' -f 2)
+          echo "mc_world=$mc_world" >> $GITHUB_ENV
+          mkdir -p ./${mc_world}/datapacks
+          
+          shopt -s globstar
+          cp -r .github/temp/MC-DataPacks/Custom/*/ ./${mc_world}/datapacks/
+          cp -r .github/temp/MC-DataPacks/Universal/bukkit ./${mc_world}/datapacks/
+          cp .github/temp/MC-DataPacks/Universal/*.zip ./${mc_world}/datapacks
+          ls -la ${mc_world}/datapacks
+
+      - name: Checkout Repository - MCSpigot-Plugins
+        uses: actions/checkout@master
+        with:
+          repository: TPM-MCNewbie/MCSpigot-Plugins
+          token: ${{ secrets.GH_PAT }}
+          path: .github/temp/MCSpigot-Plugins
+      - name: Copy Plugins Files
+        run: |
+          shopt -s globstar
+          cp .github/temp/MCSpigot-Plugins/Free/{${{ env.plugin_free }}}-*.jar ./plugins
+          #cp -r .github/temp/MCSpigot-Plugins/Free/*/ ./plugins/
+          cp .github/temp/MCSpigot-Plugins/Premium/{${{ env.plugin_premium }}}-*.jar ./plugins
+          cp .github/temp/MCSpigot-Plugins/Custom/*.jar ./plugins
+          cp .github/temp/MCSpigot-Plugins/Other/{${{ env.plugin_others }}}-*.jar ./plugins
+          ls -la plugins
+        env:
+          plugin_free: CMILib,CMI-Vault,DriveBackupV2,FarmControl,LuckPerms,Multiverse-Core,PlaceholderAPI,ProtocolLib,Skript,ViewDistanceTweaks,WorldEdit,WorldGuard
+          plugin_premium: DeluxeChat,EpicHoppers
+          plugin_others: CMI,LibsDisguises,PlayerVaultsX
+
+      - name: Server Power State - STOP
+        run: |
+          curl "https://panel.enviromc.com/api/client/servers/${{ secrets.SRV_ID }}/power" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.SRV_TOKEN }}" -X POST -d '{"signal": "stop"}'
+
+      - name: SFTP Upload
+        run: |
+          sudo apt install lftp
+          
+          ssh -o StrictHostKeyChecking=no -p ${{ env.sftp_port }} ${{ env.sftp_host }} || true
+          lftp -e "mrm ${{ env.mc_project }}-*; rm -r ${{ env.mc_world }}/datapacks; mrm plugins/*.jar; mirror --reverse --exclude=^.git(hub)?/ --verbose=1 './' '/'; quit" -p ${{ env.sftp_port }} -u ${{ secrets.SFTP_USERNAME }},${{ secrets.SFTP_PASSWORD }} sftp://${{ env.sftp_host }}
+        env:
+          sftp_host: singapore-09.enviromc.net
+          sftp_port: 2022
+
+      - name: Server Power State - START
+        if: ${{ always() }}
+        run: |
+          curl "https://panel.enviromc.com/api/client/servers/${{ secrets.SRV_ID }}/power" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.SRV_TOKEN }}" -X POST -d '{"signal": "start"}'
