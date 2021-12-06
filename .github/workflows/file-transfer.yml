@@ -15,16 +15,16 @@ jobs:
 
       - name: Download Server JAR
         run: |
-          mc_api1=$(curl "https://api.pl3x.net/v2/purpur/" -H "Accept: application/json" -H "Content-Type: application/json")
+          mc_api1=$(curl "https://api.purpurmc.org/v2/purpur" -H "Accept: application/json" -H "Content-Type: application/json")
           mc_project=$(jq -r '.project' <<< ${mc_api1})
           echo "mc_project=$mc_project" >> $GITHUB_ENV
-          mc_version=$(jq -r '.versions[0]' <<< ${mc_api1})
+          mc_version=$(jq -r '.versions[13]' <<< ${mc_api1})
           
-          mc_api2=$(curl "https://api.pl3x.net/v2/purpur/${mc_version}/" -H "Accept: application/json" -H "Content-Type: application/json")
+          mc_api2=$(curl "https://api.purpurmc.org/v2/purpur/${mc_version}" -H "Accept: application/json" -H "Content-Type: application/json")
           mc_build=$(jq -r '.builds.latest' <<< ${mc_api2})
           
           touch "${mc_project}-${mc_version}-${mc_build}"
-          curl "https://api.pl3x.net/v2/purpur/${mc_version}/${mc_build}/download" -o server.jar
+          curl "https://api.purpurmc.org/v2/purpur/${mc_version}/${mc_build}/download" -o server.jar
 
       - name: Checkout Repository - MC-DataPacks
         uses: actions/checkout@master
