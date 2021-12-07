@@ -2,7 +2,7 @@ name: File Transfer
 
 on:
   schedule:
-    - cron: '0 17 * * *'
+    - cron: '45 16 * * *'
   workflow_dispatch:
 
 jobs:
@@ -10,6 +10,10 @@ jobs:
     name: File transfer
     runs-on: ubuntu-latest
     steps:
+      - name: Server Send Command - Broadcast
+        run: |
+          curl "https://panel.enviromc.com/api/client/servers/${{ secrets.SRV_ID }}/command" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.SRV_TOKEN }}" -X POST -d '{"command": "say GitHub Actions now start restarting and updating the server"}'
+
       - name: Checkout Repository
         uses: actions/checkout@master
 
@@ -60,7 +64,7 @@ jobs:
           cp .github/temp/MCSpigot-Plugins/Other/{${{ env.plugin_others }}}-*.jar ./plugins
           ls -la plugins
         env:
-          plugin_free: Chunky,ChunkyBorder,CMILib,CMI-Vault,DriveBackupV2,FarmControl,LuckPerms,Multiverse-Core,PlaceholderAPI,ProtocolLib,Skript,ViewDistanceTweaks,WorldEdit,WorldGuard
+          plugin_free: Chunky,ChunkyBorder,CMILib,CMI-Vault,Dynmap,FarmControl,LuckPerms,MCJukebox,Multiverse-Core,Multiverse-Portals,PlaceholderAPI,ProtocolLib,Skript,ViewDistanceTweaks,WorldEdit,WorldGuard
           plugin_premium: DeluxeChat,EpicHoppers
           plugin_others: CMI,LibsDisguises,PlayerVaultsX
 
