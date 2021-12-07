@@ -6,7 +6,7 @@ jext:
   resource-pack-decline-kick-message: "Please enable resource pack for the music!"
 
   # Ignore if player somehow failed downloading the resource pack
-  ignore-failed-download: false
+  ignore-failed-download: true
 
   # Kick message for player who failed downloading the resource pack
   failed-download-kick-message: "Resource pack download failed, please re-join to try again."
@@ -16,17 +16,45 @@ jext:
 
   # Register your discs here
   disc:
-    "Cat": 
-      namespace: "music_disc.cat"
-      author: "C148"
+    "BaquaBGM":
+      namespace: "mcnholo.baqua_bgm"
+      author: "Hololive FAN"
       model-data: 0
       creeper-drop: true
       lore:
-        - "Minecraft originals"
-    "Stal":
-      namespace: "music_disc.stal"
-      author: "C148"
+        - "Baqua BGM"
+    "FubukiBadApple":
+      namespace: "mcnholo.fubuki_badapple"
+      author: "Hololive FAN"
       model-data: 0
       creeper-drop: true
       lore:
-        - "Minecraft originals"
+        - "Fubuki - Bad Apple"
+    "FubukiShinagawaSeaside":
+      namespace: "mcnholo.fubuki_shinagawaseaside"
+      author: "Hololive FAN"
+      model-data: 0
+      creeper-drop: true
+      lore:
+        - "Fubuki - Shinagawa Seaside"
+    "MikoVibing":
+      namespace: "mcnholo.miko_vibing"
+      author: "Hololive FAN"
+      model-data: 0
+      creeper-drop: true
+      lore:
+        - "Miko Vibing"
+    "PekoraOogey":
+      namespace: "mcnholo.pekora_oogey"
+      author: "Hololive FAN"
+      model-data: 0
+      creeper-drop: true
+      lore:
+        - "Pekora Oogey"
+    "SayFanfare8bit":
+      namespace: "mcnholo.sayfanfare8bit"
+      author: "Hololive FAN"
+      model-data: 0
+      creeper-drop: true
+      lore:
+        - "SayFanfare 8bit"

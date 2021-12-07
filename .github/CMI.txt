@@ -1,0 +1,62 @@
+[MODULES DISABLED]
+~ versionCheck
+- customMessages
+- firstJoinMessages
+- holograms
+- portals
+- votifier
+- shulkerBackpack
+- skin
+- deathMessages
+
+[CONFIG]
+Economy:
+  Enabled: true
+ReSpawn:
+  Specific:
+    world-lobby:
+    - anchor
+    - bedLocation
+    - spawn
+    - homeLocation
+    - worldSpawn
+Spawners:
+  Place:
+    Enabled: false
+WorldLimits:
+  FlyAboveRoofLimitations:
+  - world-lobby-256
+  SpawnReasons:
+    world-lobby:
+    - None
+purge:
+  PlayerData:
+    SourceFolder: world-nazarick/playerdata
+    DestinationFolder: world-nazarick/playerdata_backup
+  PlayerStats:
+    SourceFolder: world-nazarick/stats
+    DestinationFolder: world-nazarick/stats_backup
+  PlayerAdvancements:
+    SourceFolder: world-nazarick/Advancements
+    DestinationFolder: world-nazarick/Advancements_backup
+Time:
+  TimeSpeed:
+    world-lobby:
+      Enabled: false
+      day: 600
+      sunset: 90
+      night: 420
+      sunrise: 90
+RandomTeleportation:
+  Worlds:
+    world-lobby:
+      Enabled: false
+      MaxRange: 1000
+      MinRange: 500
+      CenterX: 0
+      CenterZ: 0
+      Circle: false
+      IgnoreWater: true
+      IgnoreLava: true
+      minY: 0
+      maxY: 256

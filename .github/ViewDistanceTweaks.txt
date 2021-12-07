@@ -1,0 +1,85 @@
+[CONFIG]
+enabled: true
+world-settings:
+  default:
+    maximum-view-distance: 10   # Default: 12
+
+  world-lobby:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+    chunk-weight: 0.5
+
+  world-earth:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-earth_nether:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-earth_the_end:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+    chunk-weight: 0.5
+  world-alternated:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-alternated_nether:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-alternated_the_end:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+    chunk-weight: 0.5
+
+  world-nazarick_the_end:
+    chunk-weight: 0.5
+  world-nazarick-amplified:
+    chunk-weight: 1.2
+  world-nazarick-cavelayered:
+    chunk-weight: 1.5
+  world-nazarick-flat:
+    chunk-weight: 0.5
+  world-nazarick-floatingislandlayered:
+    chunk-weight: 0.7
+  world-alternative_the_end:
+    chunk-weight: 0.5
+
+  world-resource:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-resource_nether:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-resource_the_end:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+    chunk-weight: 0.5
+paper-settings:
+  world-settings:
+    default:
+      maximum-no-tick-view-distance: 12   # Default: 16
+
+    world-earth:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+    world-earth_nether:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+    world-earth_the_end:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+    world-alternated:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+    world-alternated_nether:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+    world-alternated_the_end:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+
+    world-resource:
+      maximum-no-tick-view-distance: 10
+    world-resource_nether:
+      maximum-no-tick-view-distance: 10
+    world-resource_the_end:
+      maximum-no-tick-view-distance: 10

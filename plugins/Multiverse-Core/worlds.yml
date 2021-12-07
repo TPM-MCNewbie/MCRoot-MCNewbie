@@ -2,14 +2,14 @@ worlds:
   world-nazarick_nether:
     ==: MVWorld
     hidden: 'false'
-    alias: ''
+    alias: 'World Nazarick: Nether'
     color: WHITE
     style: NORMAL
     pvp: 'true'
     scale: '8.0'
-    respawnWorld: ''
+    respawnWorld: world-nazarick
     allowWeather: 'true'
-    difficulty: NORMAL
+    difficulty: HARD
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -30,7 +30,7 @@ worlds:
     adjustSpawn: 'true'
     portalForm: ALL
     gameMode: SURVIVAL
-    keepSpawnInMemory: 'true'
+    keepSpawnInMemory: 'false'
     spawnLocation:
       ==: MVSpawnLocation
       x: 0.5
@@ -49,14 +49,14 @@ worlds:
   world-nazarick:
     ==: MVWorld
     hidden: 'false'
-    alias: ''
+    alias: 'World Nazarick'
     color: WHITE
     style: NORMAL
     pvp: 'true'
     scale: '1.0'
-    respawnWorld: ''
+    respawnWorld: world-nazarick
     allowWeather: 'true'
-    difficulty: NORMAL
+    difficulty: HARD
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -77,7 +77,7 @@ worlds:
     adjustSpawn: 'true'
     portalForm: ALL
     gameMode: SURVIVAL
-    keepSpawnInMemory: 'true'
+    keepSpawnInMemory: 'false'
     spawnLocation:
       ==: MVSpawnLocation
       x: -144.0
@@ -96,14 +96,14 @@ worlds:
   world-nazarick_the_end:
     ==: MVWorld
     hidden: 'false'
-    alias: ''
+    alias: 'World Nazarick: The End'
     color: WHITE
     style: NORMAL
     pvp: 'true'
     scale: '16.0'
-    respawnWorld: ''
+    respawnWorld: world-nazarick
     allowWeather: 'true'
-    difficulty: NORMAL
+    difficulty: HARD
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -124,7 +124,7 @@ worlds:
     adjustSpawn: 'true'
     portalForm: ALL
     gameMode: SURVIVAL
-    keepSpawnInMemory: 'true'
+    keepSpawnInMemory: 'false'
     spawnLocation:
       ==: MVSpawnLocation
       x: 0.0
@@ -137,6 +137,53 @@ worlds:
     worldBlacklist: []
     environment: THE_END
     seed: '-5798575184998181119'
+    generator: 'null'
+    playerLimit: '-1'
+    allowFlight: 'true'
+  world-lobby:
+    ==: MVWorld
+    hidden: 'false'
+    alias: 'World Lobby'
+    color: WHITE
+    style: NORMAL
+    pvp: 'false'
+    scale: '1.0'
+    respawnWorld: world-lobby
+    allowWeather: 'true'
+    difficulty: NORMAL
+    spawning:
+      ==: MVSpawnSettings
+      animals:
+        ==: MVSpawnSubSettings
+        spawn: 'true'
+        spawnrate: '-1'
+        exceptions: []
+      monsters:
+        ==: MVSpawnSubSettings
+        spawn: 'false'
+        spawnrate: '-1'
+        exceptions: []
+    entryfee:
+      ==: MVEntryFee
+      amount: '0.0'
+    hunger: 'false'
+    autoHeal: 'true'
+    adjustSpawn: 'true'
+    portalForm: ALL
+    gameMode: SURVIVAL
+    keepSpawnInMemory: 'false'
+    spawnLocation:
+      ==: MVSpawnLocation
+      x: 8.0
+      y: 13.0
+      z: 8.0
+      pitch: 0.0
+      yaw: 0.0
+    autoLoad: 'true'
+    bedRespawn: 'true'
+    worldBlacklist: []
+    environment: NORMAL
+    seed: '-8775938876898214345'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'

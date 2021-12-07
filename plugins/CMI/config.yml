@@ -6,7 +6,7 @@ Economy:
   # Attention! For economy to work properly with other plugins you will need ether an injector or recompiled Vault version. 
   # You can find both option at top of plugins page
   # ATTENTION! If you disabled CMI economy while server was running, you will need to perform full server restart for this to take correct effect and avoid any issues while getting players balances
-  Enabled: false
+  Enabled: true
   # Determines if player needs to confirm money payment by clicking on chat message
   Confirmation: false
   # Set to true if you want to log money transfers between players
@@ -926,7 +926,7 @@ Spawners:
     # Enable or disable spawner handler for spawner place
     # If enabled player will place spawner depending from what it is by its type
     # If disabled then spawner will be placed in normal way and it will allow other plugins to handle its placement
-    Enabled: true
+    Enabled: false
     # If set to true, player will need to have appropriate permission node to place spawner by its type
     RequiresPermission: false
     # RequiresPermission should be set to true for this to work. If set to true, player will need to have particular permission node to place particular spawner.
@@ -1302,13 +1302,13 @@ WorldLimits:
   FlyAboveRoof: true
   # When set to false, only players with cmi.worldlimit.fly.aboveroof can fly above world build limit
   FlyAboveRoofLimitations:
-  - world-nazarick-256
+  - world-lobby-256
   # If player will have cmi.worldlimit.god.bypass permission node, god mode wont be changed
   GodMode:
   - testWorld:False
   # Prevents particular entity spawn reasons in defined worlds. All possible reasons: NATURAL, JOCKEY, CHUNK_GEN, SPAWNER, EGG, SPAWNER_EGG, LIGHTNING, BUILD_SNOWMAN, BUILD_IRONGOLEM, BUILD_WITHER, VILLAGE_DEFENSE, VILLAGE_INVASION, BREEDING, SLIME_SPLIT, REINFORCEMENTS, NETHER_PORTAL, DISPENSE_EGG, INFECTION, CURED, OCELOT_BABY, SILVERFISH_BLOCK, MOUNT, TRAP, ENDER_PEARL, SHOULDER_ENTITY, DROWNED, SHEARED, EXPLOSION, RAID, PATROL, BEEHIVE, PIGLIN_ZOMBIFIED, FROZEN, COMMAND, CUSTOM, DEFAULT
   SpawnReasons:
-    world-nazarick:
+    world-lobby:
     - None
 # Checks and shows on players login if he have been changed hes name over Mojang
 # Looks to be working only with online servers, duhhhh
@@ -1673,7 +1673,7 @@ Time:
   # Allows you to change vanilla time speed to your own liking and needs
   TimeSpeed:
     # Time is defined in seconds. Vanilla 24 hour ingame duration is 1200 seconds of real time
-    world-nazarick:
+    world-lobby:
       Enabled: false
       # Default value: 600 Starts from tick: 0 Ends at tick: 12000
       day: 600
@@ -1689,8 +1689,8 @@ RandomTeleportation:
   AutoGenerateWorlds: true
   Worlds:
     # World name to use this feature. Add annother one with appropriate name to enable random teleportation
-    world-nazarick:
-      Enabled: true
+    world-lobby:
+      Enabled: false
       # Max coordinate to teleport, setting to 1000, player can be teleported between -1000 and 1000 blocks between defined center location
       # For example having centerX at 2000 and centerZ at 3000 while MaxRange is set to 1500 we will teleport player between x:500;z:1500 and x:3500;z:4500 coordinates
       MaxRange: 1000

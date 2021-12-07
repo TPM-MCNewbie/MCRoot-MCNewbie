@@ -11,7 +11,7 @@ silentChest: true
 #  
 # Version check when player logs in
 # Applies for servers from 1.7.x and up
-versionCheck: true
+versionCheck: false
 #  
 # World limitations: fly, game mode and god mode
 # Applies for servers from 1.7.x and up
@@ -23,11 +23,11 @@ worldLimitsElytra: true
 #  
 # Login, logout and death messages
 # Applies for servers from 1.7.x and up
-customMessages: true
+customMessages: false
 #  
 # First join messages
 # Applies for servers from 1.7.x and up
-firstJoinMessages: true
+firstJoinMessages: false
 #  
 # Handling of cuffed players
 # Applies for servers from 1.7.x and up
@@ -99,11 +99,11 @@ cmiPlaytime: true
 #  
 # Handles hologram updates
 # Applies for servers from 1.7.x and up
-holograms: true
+holograms: false
 #  
 # Handles portals
 # Applies for servers from 1.7.x and up
-portals: true
+portals: false
 #  
 # Handles home bed interactions and bed destroy events. Disabling this homes will still work
 # Applies for servers from 1.7.x and up
@@ -127,7 +127,7 @@ ranks: true
 #  
 # Handles votifier system
 # Applies for servers from 1.7.x and up
-votifier: true
+votifier: false
 #  
 # Handles player combat system
 # Applies for servers from 1.7.x and up
@@ -159,11 +159,11 @@ flightCharge: true
 #  
 # Handles shulker box as backpacks
 # Applies for servers from 1.11.x and up
-shulkerBackpack: true
+shulkerBackpack: false
 #  
 # Handles player skins
 # Applies for servers from 1.8.x and up
-skin: true
+skin: false
 #  
 # Handles selection areas. While this is disabled, command can still be used
 # Applies for servers from 1.7.x and up
@@ -227,4 +227,4 @@ launchPad: true
 #  
 # Handling of launch custom death messages
 # Applies for servers from 1.7.x and up
-deathMessages: true
+deathMessages: false

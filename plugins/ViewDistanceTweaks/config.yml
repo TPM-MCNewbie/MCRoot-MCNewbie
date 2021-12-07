@@ -7,7 +7,7 @@ version: 5
 
 # Set this to true to enable the plugin. The plugin is initially disabled so that you can make changes to the config
 # appropriate to your server.
-enabled: false
+enabled: true
 
 # How should we determine whether the view distance needs adjusting? Accepts three values:
 #  * proactive : Adjust the view distance so that the player-loaded chunk count is always below a set threshold.
@@ -97,7 +97,7 @@ world-settings:
     minimum-view-distance: 6
 
     # What should the absolute maximum view distance be in this world?
-    maximum-view-distance: 12
+    maximum-view-distance: 10
 
     # Relative to the other worlds, how 'heavy' is a chunk on performance?
     #  * For example: In the End dimension, about half of the chunks you encounter are void and so have very little
@@ -110,10 +110,60 @@ world-settings:
       # that are overlapping?
       exclude-overlap: true
 
-#  world_the_end:
-#    minimum-view-distance: 8
-#    maximum-view-distance: 10
-#    chunk-weight: 0.5
+  #  world_the_end:
+  #    minimum-view-distance: 8
+  #    maximum-view-distance: 10
+  #    chunk-weight: 0.5
+
+  world-lobby:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+    chunk-weight: 0.5
+
+  world-earth:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-earth_nether:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-earth_the_end:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+    chunk-weight: 0.5
+  world-alternated:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-alternated_nether:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-alternated_the_end:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+    chunk-weight: 0.5
+
+  world-nazarick_the_end:
+    chunk-weight: 0.5
+  world-nazarick-amplified:
+    chunk-weight: 1.2
+  world-nazarick-cavelayered:
+    chunk-weight: 1.5
+  world-nazarick-flat:
+    chunk-weight: 0.5
+  world-nazarick-floatingislandlayered:
+    chunk-weight: 0.7
+  world-alternative_the_end:
+    chunk-weight: 0.5
+
+  world-resource:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-resource_nether:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+  world-resource_the_end:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
+    chunk-weight: 0.5
 
 # These are additional settings that apply if you are using Paper as your server software.
 paper-settings:
@@ -180,4 +230,30 @@ paper-settings:
       minimum-no-tick-view-distance: 8
 
       # What should the absolute maximum no-tick view distance be in this world?
-      maximum-no-tick-view-distance: 16
+      maximum-no-tick-view-distance: 12
+
+    world-earth:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+    world-earth_nether:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+    world-earth_the_end:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+    world-alternated:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+    world-alternated_nether:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+    world-alternated_the_end:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
+
+    world-resource:
+      maximum-no-tick-view-distance: 10
+    world-resource_nether:
+      maximum-no-tick-view-distance: 10
+    world-resource_the_end:
+      maximum-no-tick-view-distance: 10

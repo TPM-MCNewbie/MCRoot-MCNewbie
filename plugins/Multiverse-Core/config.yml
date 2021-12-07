@@ -24,12 +24,12 @@ multiverse-configuration:
   teleportintercept: 'true'
   firstspawnoverride: 'true'
   displaypermerrors: 'true'
-  enablebuscript: 'true'
+  enablebuscript: 'false'
   globaldebug: '0'
   silentstart: 'false'
   messagecooldown: '5000'
   version: '2.9'
-  firstspawnworld: world-nazarick
+  firstspawnworld: world-lobby
   teleportcooldown: '1000'
   defaultportalsearch: 'true'
   portalsearchradius: '128'
