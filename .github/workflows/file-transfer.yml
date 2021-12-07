@@ -60,7 +60,7 @@ jobs:
           cp .github/temp/MCSpigot-Plugins/Other/{${{ env.plugin_others }}}-*.jar ./plugins
           ls -la plugins
         env:
-          plugin_free: CMILib,CMI-Vault,DriveBackupV2,FarmControl,LuckPerms,Multiverse-Core,PlaceholderAPI,ProtocolLib,Skript,ViewDistanceTweaks,WorldEdit,WorldGuard
+          plugin_free: Chunky,ChunkyBorder,CMILib,CMI-Vault,DriveBackupV2,FarmControl,LuckPerms,Multiverse-Core,PlaceholderAPI,ProtocolLib,Skript,ViewDistanceTweaks,WorldEdit,WorldGuard
           plugin_premium: DeluxeChat,EpicHoppers
           plugin_others: CMI,LibsDisguises,PlayerVaultsX
 
