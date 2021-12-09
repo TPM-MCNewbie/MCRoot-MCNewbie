@@ -43,7 +43,7 @@ components:
   - class: org.dynmap.InternalClientUpdateComponent
     sendhealth: true
     sendposition: true
-    allowwebchat: true
+    allowwebchat: false
     webchat-interval: 5
     hidewebchatip: false
     trustclientname: false
@@ -329,7 +329,7 @@ exportpath: export
 #webserver-bindaddress: 0.0.0.0
 
 # The TCP-port the webserver will listen on.
-webserver-port: 8123
+webserver-port: 25599
 
 # Maximum concurrent session on internal web server - limits resources used in Bukkit server
 max-sessions: 30
@@ -341,7 +341,7 @@ disable-webserver: false
 allow-symlinks: true
 
 # Enable login support
-login-enabled: false
+login-enabled: true
 # Require login to access website (requires login-enabled: true)
 login-required: false
 
@@ -414,7 +414,7 @@ check-banned-ips: true
 
 # Default selection when map page is loaded
 defaultzoom: 0
-defaultworld: world
+defaultworld: world-earth
 defaultmap: flat
 # (optional) Zoom level and map to switch to when following a player, if possible
 #followzoom: 3
