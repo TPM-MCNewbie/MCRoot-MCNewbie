@@ -1240,6 +1240,25 @@ Spawn:
     Yaw: 0.0
     RespawnLocation: false
     Rng: 0
+  Groups:
+    earth:
+      World: world-earth
+      X: 272.0
+      Y: 73.0
+      Z: -301.0
+      Pitch: 0.0
+      Yaw: 0.0
+      RespawnLocation: true
+      Rng: 0
+    nazarick:
+      World: world-nazarick
+      X: -144.0
+      Y: 76.0
+      Z: 48.0
+      Pitch: 0.0
+      Yaw: 0.0
+      RespawnLocation: true
+      Rng: 0
   # Defines players first spawn point when he logs into server for the first time
   FirstSpawn:
     Use: true
