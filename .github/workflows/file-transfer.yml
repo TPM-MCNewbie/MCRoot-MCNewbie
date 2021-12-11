@@ -60,9 +60,9 @@ jobs:
           
           shopt -s globstar
           cp .github/temp/MCSpigot-Plugins/Free/{${{ env.plugin_free }}}-*.jar ./plugins
-          cp .github/temp/MCSpigot-Plugins/Free/Dimensions/addons/{${{ env.plugin_free_dimensions }}}-*.jar ./plugins/Dimensions/addons
+          cp .github/temp/MCSpigot-Plugins/Free/Dimensions/addons/{${{ env.plugin_free_dimensions }}}.jar ./plugins/Dimensions/addons
           cp .github/temp/MCSpigot-Plugins/Premium/{${{ env.plugin_premium }}}-*.jar ./plugins
-          cp .github/temp/MCSpigot-Plugins/Premium/Dimensions/addons/{${{ env.plugin_premium_dimensions }}}-*.jar ./plugins/Dimensions/addons
+          cp .github/temp/MCSpigot-Plugins/Premium/Dimensions/addons/{${{ env.plugin_premium_dimensions }}}.jar ./plugins/Dimensions/addons
           cp .github/temp/MCSpigot-Plugins/Custom/*.jar ./plugins
           cp .github/temp/MCSpigot-Plugins/Other/{${{ env.plugin_others }}}-*.jar ./plugins
           ls -la plugins
@@ -70,8 +70,12 @@ jobs:
           plugin_free: Chunky,ChunkyBorder,CMILib,CMI-Vault,DeluxeMenus,Dimensions,Dynmap,FarmControl,LuckPerms,Multiverse-Core,Multiverse-NetherPortals,Multiverse-Portals,PlaceholderAPI,ProtocolLib,Skript,ViewDistanceTweaks,WorldEdit,WorldGuard
           plugin_free_dimensions: BaseAddon,WorldGuardFlagsAddon
           plugin_premium: DeluxeChat,EpicHoppers
-          plugin_premium_dimensions: CustomLighterAddon
+          plugin_premium_dimensions: CustomLighterAddon,RandomLocationAddon
           plugin_others: CMI,LibsDisguises,PlayerVaultsX
+      - name: Set Secret Configuration
+        run: |
+          sed -i '/^  - "127.0.0.1"/a \  - "${{ secrets.PROXY_IPV4 }}"' ./plugins/dynmap/configuration.txt
+          sed -i '/^  - "0:0:0:0:0:0:0:1"/a \  - "${{ secrets.PROXY_IPV6 }}"' ./plugins/dynmap/configuration.txt
 
       - name: Server Power State - STOP
         run: |
