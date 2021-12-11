@@ -56,16 +56,21 @@ jobs:
           path: .github/temp/MCSpigot-Plugins
       - name: Copy Plugins Files
         run: |
+          mkdir -p ./plugins/Dimensions/addons
+          
           shopt -s globstar
           cp .github/temp/MCSpigot-Plugins/Free/{${{ env.plugin_free }}}-*.jar ./plugins
-          #cp -r .github/temp/MCSpigot-Plugins/Free/*/ ./plugins/
+          cp .github/temp/MCSpigot-Plugins/Free/Dimensions/addons/{${{ env.plugin_free_dimensions }}}-*.jar ./plugins/Dimensions/addons
           cp .github/temp/MCSpigot-Plugins/Premium/{${{ env.plugin_premium }}}-*.jar ./plugins
+          cp .github/temp/MCSpigot-Plugins/Premium/Dimensions/addons/{${{ env.plugin_premium_dimensions }}}-*.jar ./plugins/Dimensions/addons
           cp .github/temp/MCSpigot-Plugins/Custom/*.jar ./plugins
           cp .github/temp/MCSpigot-Plugins/Other/{${{ env.plugin_others }}}-*.jar ./plugins
           ls -la plugins
         env:
-          plugin_free: Chunky,ChunkyBorder,CMILib,CMI-Vault,Dynmap,FarmControl,LuckPerms,MCJukebox,Multiverse-Core,Multiverse-NetherPortals,Multiverse-Portals,PlaceholderAPI,ProtocolLib,Skript,ViewDistanceTweaks,WorldEdit,WorldGuard
+          plugin_free: Chunky,ChunkyBorder,CMILib,CMI-Vault,DeluxeMenus,Dimensions,Dynmap,FarmControl,LuckPerms,Multiverse-Core,Multiverse-NetherPortals,Multiverse-Portals,PlaceholderAPI,ProtocolLib,Skript,ViewDistanceTweaks,WorldEdit,WorldGuard
+          plugin_free_dimensions: BaseAddon,WorldGuardFlagsAddon
           plugin_premium: DeluxeChat,EpicHoppers
+          plugin_premium_dimensions: CustomLighterAddon
           plugin_others: CMI,LibsDisguises,PlayerVaultsX
 
       - name: Server Power State - STOP
@@ -77,7 +82,7 @@ jobs:
           sudo apt install lftp
           
           ssh -o StrictHostKeyChecking=no -p ${{ env.sftp_port }} ${{ env.sftp_host }} || true
-          lftp -e "mrm ${{ env.mc_project }}-*; rm -r ${{ env.mc_world }}/datapacks; mrm plugins/*.jar; mirror --reverse --exclude=^.git(hub)?/ --verbose=1 './' '/'; quit" -p ${{ env.sftp_port }} -u ${{ secrets.SFTP_USERNAME }},${{ secrets.SFTP_PASSWORD }} sftp://${{ env.sftp_host }}
+          lftp -e "mrm ${{ env.mc_project }}-*; rm -r ${{ env.mc_world }}/datapacks; mrm plugins/*.jar; rm -r plugins/Dimensions/addons; mirror --reverse --parallel=5 --exclude=^.git(hub)?/ --verbose=1 './' '/'; quit" -p ${{ env.sftp_port }} -u ${{ secrets.SFTP_USERNAME }},${{ secrets.SFTP_PASSWORD }} sftp://${{ env.sftp_host }}
         env:
           sftp_host: singapore-09.enviromc.net
           sftp_port: 2022
