@@ -1,0 +1,119 @@
+{
+  "world-lobby": {
+    "world": "world-lobby",
+    "centerX": 8.0,
+    "centerZ": 8.0,
+    "radiusX": 256.0,
+    "radiusZ": 256.0,
+    "shape": "pentagon",
+    "wrap": false
+  },
+  "world-earth": {
+    "world": "world-earth",
+    "centerX": -236.0,
+    "centerZ": -180.0,
+    "radiusX": 2048.0,
+    "radiusZ": 2048.0,
+    "shape": "square",
+    "wrap": false
+  },
+  "world-earth_nether": {
+    "world": "world-earth_nether",
+    "centerX": -236.0,
+    "centerZ": -180.0,
+    "radiusX": 256.0,
+    "radiusZ": 256.0,
+    "shape": "square",
+    "wrap": false
+  },
+  "world-earth_the_end": {
+    "world": "world-earth_the_end",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 4096.0,
+    "radiusZ": 4096.0,
+    "shape": "circle",
+    "wrap": false
+  },
+  "world-earth-nte_nether": {
+    "world": "world-earth-nte_nether",
+    "centerX": -236.0,
+    "centerZ": -180.0,
+    "radiusX": 2048.0,
+    "radiusZ": 2048.0,
+    "shape": "square",
+    "wrap": false
+  },
+  "world-nazarick": {
+    "world": "world-nazarick",
+    "centerX": -144.0,
+    "centerZ": 48.0,
+    "radiusX": 2048.0,
+    "radiusZ": 2048.0,
+    "shape": "square",
+    "wrap": false
+  },
+  "world-nazarick_nether": {
+    "world": "world-nazarick_nether",
+    "centerX": -144.0,
+    "centerZ": 48.0,
+    "radiusX": 256.0,
+    "radiusZ": 256.0,
+    "shape": "square",
+    "wrap": false
+  },
+  "world-nazarick_the_end": {
+    "world": "world-nazarick_the_end",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 4096.0,
+    "radiusZ": 4096.0,
+    "shape": "circle",
+    "wrap": false
+  },
+  "world-nazarick-nte_nether": {
+    "world": "world-nazarick-nte_nether",
+    "centerX": -144.0,
+    "centerZ": 48.0,
+    "radiusX": 2048.0,
+    "radiusZ": 2048.0,
+    "shape": "square",
+    "wrap": false
+  },
+  "world-resource": {
+    "world": "world-resource",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 4096.0,
+    "radiusZ": 4096.0,
+    "shape": "square",
+    "wrap": false
+  },
+  "world-resource_nether": {
+    "world": "world-resource_nether",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 512.0,
+    "radiusZ": 512.0,
+    "shape": "square",
+    "wrap": false
+  },
+  "world-resource_the_end": {
+    "world": "world-resource_the_end",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 8192.0,
+    "radiusZ": 8192.0,
+    "shape": "circle",
+    "wrap": false
+  },
+  "world-resource-nte_nether": {
+    "world": "world-resource-nte_nether",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 4096.0,
+    "radiusZ": 4096.0,
+    "shape": "square",
+    "wrap": false
+  }
+}
