@@ -128,6 +128,145 @@ world-settings:
         disable-collisions:
           tempt: true
 
+  world-earth:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-animal-farms
+        - trim-sparse-animal-farms
+      reactive:
+        - hard-nerf-animal-farms
+        - trim-villager-chunks
+  world-earth_nether:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-animal-farms
+        - trim-sparse-animal-farms
+      reactive:
+        - hard-nerf-animal-farms
+        - trim-villager-chunks
+  world-earth_the_end:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-animal-farms
+        - trim-sparse-animal-farms
+      reactive:
+        - hard-nerf-animal-farms
+        - trim-villager-chunks
+  world-earth-nte_nether:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-animal-farms
+        - trim-sparse-animal-farms
+      reactive:
+        - hard-nerf-animal-farms
+        - trim-villager-chunks
+  world-alternated:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-animal-farms
+        - trim-sparse-animal-farms
+      reactive:
+        - hard-nerf-animal-farms
+        - trim-villager-chunks
+  world-alternated_nether:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-animal-farms
+        - trim-sparse-animal-farms
+      reactive:
+        - hard-nerf-animal-farms
+        - trim-villager-chunks
+  world-alternated_the_end:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-animal-farms
+        - trim-sparse-animal-farms
+      reactive:
+        - hard-nerf-animal-farms
+        - trim-villager-chunks
+  world-alternated-nte_nether:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-animal-farms
+        - trim-sparse-animal-farms
+      reactive:
+        - hard-nerf-animal-farms
+        - trim-villager-chunks
+
+  world-nazarick:
+    profiles:
+      proactive:
+        - disable-collisions-animal-farms
+  world-nazarick_nether:
+    profiles:
+      proactive:
+        - disable-collisions-animal-farms
+  world-nazarick_the_end:
+    profiles:
+      proactive:
+        - disable-collisions-animal-farms
+  world-nazarick-nte_nether:
+    profiles:
+      proactive:
+        - disable-collisions-animal-farms
+  world-alternative:
+    profiles:
+      proactive:
+        - disable-collisions-animal-farms
+  world-alternative_nether:
+    profiles:
+      proactive:
+        - disable-collisions-animal-farms
+  world-alternative_the_end:
+    profiles:
+      proactive:
+        - disable-collisions-animal-farms
+  world-alternative-nte_nether:
+    profiles:
+      proactive:
+        - disable-collisions-animal-farms
+
+  world-resource:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-villager-chunks
+      reactive:
+        - hard-nerf-animal-farms
+        - freeze-animal-farms
+  world-resource_nether:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-villager-chunks
+      reactive:
+        - hard-nerf-animal-farms
+        - freeze-animal-farms
+  world-resource_the_end:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-villager-chunks
+      reactive:
+        - hard-nerf-animal-farms
+        - freeze-animal-farms
+  world-resource-nte_nether:
+    profiles:
+      proactive:
+        - soft-nerf-animal-farms
+        - trim-villager-chunks
+      reactive:
+        - hard-nerf-animal-farms
+        - freeze-animal-farms
+
 # These settings concern how we determine the TPS.
 #  * Only touch these settings if you know what you're doing.
 tps-tracker-settings:

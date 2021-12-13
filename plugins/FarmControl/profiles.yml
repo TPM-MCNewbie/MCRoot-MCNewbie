@@ -1,6 +1,16 @@
 # Please visit https://github.com/froobynooby/FarmControl/wiki/Profiles for help with making profiles.
 
 profiles:
+  # Disable collisions of mobs in animal farms
+  disable-collisions-animal-farms:
+    group:
+      types:
+        - "category:animal"
+      count: 15
+      distance: 5
+    actions:
+      - disable-collisions
+
   # Remove random movements and disable collisions of mobs in animal farms
   soft-nerf-animal-farms:
     group:
