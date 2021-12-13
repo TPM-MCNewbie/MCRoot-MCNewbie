@@ -206,6 +206,17 @@ world-settings:
       monsters: 24
       misc: 8
       tick-inactive-villagers: false
+  world-earth-nte_nether:
+    seed-fortress: 5782577384
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
   world-alternated:
     seed-village: 3948827095
     seed-desert: 4671626037
@@ -235,6 +246,17 @@ world-settings:
       tick-inactive-villagers: false
   world-alternated_the_end:
     seed-endcity: 3499109163
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
+  world-alternated-nte_nether:
+    seed-fortress: 1533710123
     mob-spawn-range: 6
     merge-radius:
       exp: 6.0
@@ -291,6 +313,24 @@ world-settings:
   world-resource_the_end:
     hopper-amount: 4
     seed-endcity: 3969658088
+    mob-spawn-range: 6
+    merge-radius:
+      exp: 6.0
+      item: 4.0
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      misc: 8
+      tick-inactive-villagers: false
+    ticks-per:
+      hopper-transfer: 16
+      hopper-check: 2
+  world-resource-nte_nether:
+    hopper-amount: 4
+    seed-bastion: 5370911591
+    seed-fortress: 1140685153
+    seed-fossil: 4794269984
+    seed-portal: 1177628571
     mob-spawn-range: 6
     merge-radius:
       exp: 6.0

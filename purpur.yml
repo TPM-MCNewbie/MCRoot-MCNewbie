@@ -1316,6 +1316,10 @@ world-settings:
     mobs:
       zombie:
         aggressive-towards-villager-when-lagging: false
+  world-earth-nte_nether:
+    mobs:
+      zombie:
+        aggressive-towards-villager-when-lagging: false
   world-alternated:
     mobs:
       zombie:
@@ -1325,6 +1329,10 @@ world-settings:
       zombie:
         aggressive-towards-villager-when-lagging: false
   world-alternated_the_end:
+    mobs:
+      zombie:
+        aggressive-towards-villager-when-lagging: false
+  world-alternated-nte_nether:
     mobs:
       zombie:
         aggressive-towards-villager-when-lagging: false
@@ -1343,6 +1351,12 @@ world-settings:
       zombie:
         aggressive-towards-villager-when-lagging: false
   world-resource_the_end:
+    mobs:
+      villager:
+        brain-ticks: 2
+      zombie:
+        aggressive-towards-villager-when-lagging: false
+  world-resource-nte_nether:
     mobs:
       villager:
         brain-ticks: 2

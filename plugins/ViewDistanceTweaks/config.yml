@@ -130,6 +130,9 @@ world-settings:
     minimum-view-distance: 4
     maximum-view-distance: 8
     chunk-weight: 0.5
+  world-earth-nte_nether:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
   world-alternated:
     minimum-view-distance: 4
     maximum-view-distance: 8
@@ -140,6 +143,9 @@ world-settings:
     minimum-view-distance: 4
     maximum-view-distance: 8
     chunk-weight: 0.5
+  world-alternated-nte_nether:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
 
   world-nazarick_the_end:
     chunk-weight: 0.5
@@ -164,6 +170,9 @@ world-settings:
     minimum-view-distance: 4
     maximum-view-distance: 8
     chunk-weight: 0.5
+  world-resource-nte_nether:
+    minimum-view-distance: 4
+    maximum-view-distance: 8
 
 # These are additional settings that apply if you are using Paper as your server software.
 paper-settings:
@@ -241,6 +250,9 @@ paper-settings:
     world-earth_the_end:
       minimum-no-tick-view-distance: 6
       maximum-no-tick-view-distance: 10
+    world-earth-nte_nether:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
     world-alternated:
       minimum-no-tick-view-distance: 6
       maximum-no-tick-view-distance: 10
@@ -250,10 +262,15 @@ paper-settings:
     world-alternated_the_end:
       minimum-no-tick-view-distance: 6
       maximum-no-tick-view-distance: 10
+    world-alternated-nte_nether:
+      minimum-no-tick-view-distance: 6
+      maximum-no-tick-view-distance: 10
 
     world-resource:
       maximum-no-tick-view-distance: 10
     world-resource_nether:
       maximum-no-tick-view-distance: 10
     world-resource_the_end:
+      maximum-no-tick-view-distance: 10
+    world-resource-nte_nether:
       maximum-no-tick-view-distance: 10

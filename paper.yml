@@ -539,6 +539,67 @@ world-settings:
       underground_water_creature: 3
       water_creature: 3
       water_ambient: 10
+  world-earth-nte_nether:
+    max-auto-save-chunks-per-tick: 8
+    grass-spread-tick-rate: 4
+    keep-spawn-loaded: false
+    keep-spawn-loaded-range: 8
+    auto-save-interval: 9020
+    non-player-arrow-despawn-rate: 60
+    creative-arrow-despawn-rate: 60
+    mob-spawner-tick-rate: 2
+    entity-per-chunk-save-limit:
+      experience_orb: 16
+      snowball: 8
+      ender_pearl: 8
+      arrow: 16
+      fireball: 8
+      small_fireball: 8
+      dragon_fireball: 3
+      egg: 8
+      eye_of_ender: 8
+      firework_rocket: 8
+      potion: 8
+      llama_spit: 3
+      shulker_bullet: 8
+      spectral_arrow: 16
+      experience_bottle: 3
+      trident: 16
+      wither_skull: 4
+      area_effect_cloud: 8
+    despawn-ranges:
+      soft: 28
+      hard: 96
+    hopper:
+      disable-move-event: true
+    spawn-limits:
+      monster: 57
+      creature: 8
+      ambient: 1
+      underground_water_creature: 3
+      water_creature: 3
+      water_ambient: 10
+    anti-xray:
+      enabled: true
+      engine-mode: 2
+      max-chunk-section-index: 7
+      hidden-blocks:
+      - cave_air
+      - ancient_debris
+      - bone_block
+      - glowstone
+      - magma_block
+      - nether_bricks
+      - nether_gold_ore
+      - nether_quartz_ore
+      - polished_blackstone_bricks
+      replacement-blocks:
+      - basalt
+      - blackstone
+      - gravel
+      - netherrack
+      - soul_sand
+      - soul_soil
   world-alternated:
     max-auto-save-chunks-per-tick: 8
     grass-spread-tick-rate: 4
@@ -700,10 +761,72 @@ world-settings:
       underground_water_creature: 3
       water_creature: 3
       water_ambient: 10
+  world-alternated-nte_nether:
+    max-auto-save-chunks-per-tick: 8
+    grass-spread-tick-rate: 4
+    keep-spawn-loaded-range: 8
+    auto-save-interval: 9020
+    non-player-arrow-despawn-rate: 60
+    creative-arrow-despawn-rate: 60
+    mob-spawner-tick-rate: 2
+    entity-per-chunk-save-limit:
+      experience_orb: 16
+      snowball: 8
+      ender_pearl: 8
+      arrow: 16
+      fireball: 8
+      small_fireball: 8
+      dragon_fireball: 3
+      egg: 8
+      eye_of_ender: 8
+      firework_rocket: 8
+      potion: 8
+      llama_spit: 3
+      shulker_bullet: 8
+      spectral_arrow: 16
+      experience_bottle: 3
+      trident: 16
+      wither_skull: 4
+      area_effect_cloud: 8
+    despawn-ranges:
+      soft: 28
+      hard: 96
+    hopper:
+      disable-move-event: true
+    spawn-limits:
+      monster: 57
+      creature: 8
+      ambient: 1
+      underground_water_creature: 3
+      water_creature: 3
+      water_ambient: 10
+    anti-xray:
+      enabled: true
+      engine-mode: 2
+      max-chunk-section-index: 7
+      hidden-blocks:
+      - cave_air
+      - ancient_debris
+      - bone_block
+      - glowstone
+      - magma_block
+      - nether_bricks
+      - nether_gold_ore
+      - nether_quartz_ore
+      - polished_blackstone_bricks
+      replacement-blocks:
+      - basalt
+      - blackstone
+      - gravel
+      - netherrack
+      - soul_sand
+      - soul_soil
   world-nazarick_nether:
     auto-save-interval: 9020
   world-nazarick_the_end:
     auto-save-interval: 11050
+  world-nazarick-nte_nether:
+    auto-save-interval: 9020
   world-nazarick-flat:
     auto-save-interval: 11050
   world-nazarick-floatingislandlayered:
@@ -714,6 +837,8 @@ world-settings:
     auto-save-interval: 9020
   world-alternative_the_end:
     auto-save-interval: 11050
+  world-alternative-nte_nether:
+    auto-save-interval: 9020
   world-resource:
     update-pathfinding-on-block-update: false
     max-auto-save-chunks-per-tick: 10
@@ -842,6 +967,51 @@ world-settings:
       disable-move-event: true
     spawn-limits:
       monster: 4
+      creature: 24
+      ambient: 1
+      underground_water_creature: 3
+      water_creature: 3
+      water_ambient: 10
+    feature-seeds:
+      generate-random-seeds-for-all: true
+  world-resource-nte_nether:
+    update-pathfinding-on-block-update: false
+    max-auto-save-chunks-per-tick: 10
+    grass-spread-tick-rate: 4
+    keep-spawn-loaded-range: 8
+    auto-save-interval: 9020
+    armor-stands-tick: false
+    non-player-arrow-despawn-rate: 20
+    creative-arrow-despawn-rate: 20
+    mob-spawner-tick-rate: 2
+    entity-per-chunk-save-limit:
+      experience_orb: 12
+      snowball: 6
+      ender_pearl: 6
+      arrow: 12
+      fireball: 6
+      small_fireball: 6
+      dragon_fireball: 2
+      egg: 6
+      eye_of_ender: 6
+      firework_rocket: 6
+      potion: 6
+      llama_spit: 2
+      shulker_bullet: 6
+      spectral_arrow: 12
+      experience_bottle: 2
+      trident: 12
+      wither_skull: 3
+      area_effect_cloud: 6
+    despawn-ranges:
+      soft: 28
+      hard: 96
+    lootables:
+      auto-replenish: true
+    hopper:
+      disable-move-event: true
+    spawn-limits:
+      monster: 5
       creature: 24
       ambient: 1
       underground_water_creature: 3
