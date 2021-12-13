@@ -1,0 +1,21 @@
+name: Logs Purge
+
+on:
+  schedule:
+    - cron: '45 22 * * */7'
+  workflow_dispatch:
+
+jobs:
+  logs_purge:
+    name: Logs purge
+    runs-on: ubuntu-latest
+    steps:
+      - name: SFTP Logs Purge
+        run: |
+          sudo apt install lftp
+          
+          ssh -o StrictHostKeyChecking=no -p ${{ env.sftp_port }} ${{ env.sftp_host }} || true
+          lftp -e "mrm logs/*.log.gz; quit" -p ${{ env.sftp_port }} -u ${{ secrets.SFTP_USERNAME }},${{ secrets.SFTP_PASSWORD }} sftp://${{ env.sftp_host }}
+        env:
+          sftp_host: singapore-09.enviromc.net
+          sftp_port: 2022
