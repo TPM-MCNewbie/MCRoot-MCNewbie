@@ -88,7 +88,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no -p ${{ env.sftp_port }} ${{ env.sftp_host }} || true
           lftp -e "mrm ${{ env.mc_project }}-*; rm -r ${{ env.mc_world }}/datapacks; mrm plugins/*.jar; rm -r plugins/Dimensions/addons; mirror --reverse --parallel=5 --exclude=^.git(hub)?/ --exclude=README.md --verbose=1 './' '/'; quit" -p ${{ env.sftp_port }} -u ${{ secrets.SFTP_USERNAME }},${{ secrets.SFTP_PASSWORD }} sftp://${{ env.sftp_host }}
         env:
-          sftp_host: singapore-09.enviromc.net
+          sftp_host: sgp-15.enviromc.net
           sftp_port: 2022
 
       - name: Server Power State - START
